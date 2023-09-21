@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trabalho Matheus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPalavra"
+        android:layout_width="381dp"
+        android:layout_height="69dp"
+        android:layout_below="@+id/textTitulo"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Digite uma palavra" />
+
+    <EditText
+        android:id="@+id/editTextCaractere"
+        android:layout_width="382dp"
+        android:layout_height="67dp"
+        android:layout_above="@+id/buttonCalcular"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="235dp"
+        android:hint="Digite o caractere a ser contado" />
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonLimpar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="128dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="17dp"
+        android:text="Contar Letras" />
+
+    <Button
+        android:id="@+id/buttonLimpar"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonEncerrar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="32dp"
+        android:text="Limpar" />
+
+    <Button
+        android:id="@+id/buttonEncerrar"
+        android:layout_width="217dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="95dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="36dp"
+        android:text="Encerrar Programa" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="210dp"
+        android:layout_height="90dp"
+        android:layout_below="@+id/buttonEncerrar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="-411dp"
+        android:layout_marginEnd="103dp"
+        android:text=""
+        android:textColor="#FF0000" />
+</RelativeLayout>
