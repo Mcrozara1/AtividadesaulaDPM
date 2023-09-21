@@ -1,85 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnFinalizar"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Trabalho Matheus"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editTextPalavra"
-        android:layout_width="381dp"
-        android:layout_height="69dp"
-        android:layout_below="@+id/textTitulo"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="63dp"
-        android:layout_marginEnd="16dp"
-        android:hint="Digite uma palavra" />
-
-    <EditText
-        android:id="@+id/editTextCaractere"
-        android:layout_width="382dp"
-        android:layout_height="67dp"
-        android:layout_above="@+id/buttonCalcular"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="235dp"
-        android:hint="Digite o caractere a ser contado" />
-
-    <Button
-        android:id="@+id/buttonCalcular"
-        android:layout_width="172dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonLimpar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="128dp"
-        android:layout_marginEnd="110dp"
-        android:layout_marginBottom="17dp"
-        android:text="Contar Letras" />
-
-    <Button
-        android:id="@+id/buttonLimpar"
-        android:layout_width="185dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonEncerrar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="112dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginBottom="32dp"
-        android:text="Limpar" />
-
-    <Button
-        android:id="@+id/buttonEncerrar"
-        android:layout_width="217dp"
+        android:id="@+id/txtCarac"
+        android:layout_width="418dp"
         android:layout_height="52dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="95dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="36dp"
-        android:text="Encerrar Programa" />
+        android:layout_marginTop="12dp"
+        android:background="@color/design_default_color_primary"
+        android:text="Quantidade de caracteres"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editResposta" />
 
     <TextView
-        android:id="@+id/textViewResultado"
-        android:layout_width="210dp"
-        android:layout_height="90dp"
-        android:layout_below="@+id/buttonEncerrar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="-411dp"
-        android:layout_marginEnd="103dp"
-        android:text=""
-        android:textColor="#FF0000" />
-</RelativeLayout>
+        android:id="@+id/txtCabecalho"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/design_default_color_primary_dark"
+        android:text="Atividade calculadora de letras"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:verticalScrollbarPosition="right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnFinalizar"
+        android:layout_width="416dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="12dp"
+        android:background="#03A9F4"
+        android:text="Finalizar"
+        android:textColorHighlight="@color/white"
+        android:textColorLink="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="424dp"
+        android:layout_height="48dp"
+        android:text="Limpar"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btncalcular"
+        android:layout_width="424dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:text="Calcular"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtletraA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtresposta"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Digitetexto1"
+        android:layout_width="418dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/design_default_color_primary"
+        android:foregroundTint="@color/white"
+        android:text="Digite uma palavra ou frase!"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCabecalho" />
+
+    <EditText
+        android:id="@+id/editResposta"
+        android:layout_width="410dp"
+        android:layout_height="76dp"
+        android:ems="10"
+        android:hint="Digite o texto aqui"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Digitetexto1" />
+
+    <TextView
+        android:id="@+id/txtresposta"
+        android:layout_width="403dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="12dp"
+        android:text="A quantidade de caracteres é:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCarac" />
+
+    <Button
+        android:id="@+id/btncalca"
+        android:layout_width="160dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="40dp"
+        android:text="Calcular letras A"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLimpar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtletraA" />
+
+    <TextView
+        android:id="@+id/txtletraA"
+        android:layout_width="179dp"
+        android:layout_height="40dp"
+        android:text="A quantidade de letras A é :"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="474dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
